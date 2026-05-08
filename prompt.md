@@ -1,58 +1,61 @@
 
 
+## Prompt 1
 
+Help improve the UI design for a modern web application.
 
-# Create a responsive landing page using HTML, CSS, and JavaScript for an AI Cover Letter Generator.
+## Prompt 2
 
+Suggest a clean layout for a responsive landing page.
 
+## Prompt 3
 
-# Build a Node.js server to securely handle API requests using environment variables.
+Improve form validation in JavaScript for better user experience.
 
+## Prompt 4
 
+Help optimize API request handling using async and await.
 
-# Integrate Groq AI API with JavaScript fetch requests and return generated responses.
+## Prompt 5
 
+Suggest ways to improve loading animations and transitions.
 
+## Prompt 6
 
-# Design a modern SaaS-style UI with glassmorphism and responsive layout.
+Help structure a professional AI-generated cover letter.
 
+## Prompt 7
 
+Improve responsiveness for mobile and tablet screens.
 
-# Generate loading animations while waiting for AI response from API.
+## Prompt 8
 
+Suggest better error handling practices for backend requests.
 
+## Prompt 9
 
-# Create a copy-to-clipboard functionality for generated cover letters.
+Optimize prompt wording for more professional AI responses.
 
+## Prompt 10
 
+Help implement secure environment variable handling using dotenv.
 
-# Implement PDF download functionality using jsPDF CDN library.
+## Prompt 11
 
+Suggest improvements for frontend and backend communication.
 
+## Prompt 12
 
-# Write clean frontend validation for empty input fields before API request.
+Help create reusable JavaScript functions for cleaner code.
 
+## Prompt 13
 
+Improve overall user experience and accessibility of the website.
 
-# Optimize prompt structure for better ATS-friendly AI responses.
+## Prompt 14
 
+Suggest styling improvements for a modern SaaS-inspired interface.
 
-# Create secure API key handling using dotenv and .env files.
+## Prompt 15
 
-
-
-# Fix CORS issues between frontend and backend communication.
-
-
-
-# Generate asynchronous API handling using async/await in JavaScript.
-
-
-# Improve UI accessibility and mobile responsiveness for smaller devices.
-
-
-# Create reusable JavaScript functions for form handling and API calls.
-
-
-
-# Debug Node.js server errors and improve error handling for failed API responses.
+Help debug common API integration and server-side issues.
