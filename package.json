@@ -1,0 +1,22 @@
+{
+  "name": "ai-cover-letter",
+  "version": "1.0.0",
+  "description": "AI cover letter generator with a vanilla HTML/CSS/JS UI and a tiny Node proxy to Google Gemini.",
+  "private": true,
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.36.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

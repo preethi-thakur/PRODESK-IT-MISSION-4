@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Cover Letter Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name"></span>
+      </div>
+      <a class="header-link" href="#generator">Generate</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Powered by openai</p>
+        <h1>Write a tailored cover letter in seconds.</h1>
+        <p class="lede">
+          Tell us about you and the role. We'll draft a polished, one-page cover letter
+          you can refine, copy, or save as a PDF.
+        </p>
+      </div>
+    </section>
+
+    <section id="generator" class="generator">
+      <div class="container generator-grid">
+        <form id="cover-form" class="card form-card" novalidate>
+          <div class="card-title-row">
+            <h2>Your details</h2>
+            <span class="card-badge">Step 1</span>
+          </div>
+          <p class="card-sub">Fields marked * are required.</p>
+
+          <div class="grid-2">
+            <label class="field">
+              <span>Full name *</span>
+              <input type="text" name="fullName" required autocomplete="name" placeholder="Jane Doe" />
+            </label>
+
+            <label class="field">
+              <span>Target role *</span>
+              <input type="text" name="role" required placeholder="Senior Frontend Engineer" />
+            </label>
+          </div>
+
+          <div class="grid-2">
+            <label class="field">
+              <span>Company *</span>
+              <input type="text" name="company" required placeholder="Acme Inc." />
+            </label>
+
+            <label class="field">
+              <span>Tone</span>
+              <select name="tone">
+                <option value="Professional">Professional</option>
+                <option value="Enthusiastic">Enthusiastic</option>
+                <option value="Concise">Concise</option>
+                <option value="Friendly">Friendly</option>
+              </select>
+            </label>
+          </div>
+
+          <label class="field">
+            <span>Experience summary</span>
+            <textarea name="experience" rows="2" placeholder="6 years building React apps in fintech, led a team of 4."></textarea>
+          </label>
+
+          <label class="field">
+            <span>Top skills</span>
+            <input type="text" name="skills" placeholder="React, TypeScript, design systems, performance" />
+          </label>
+
+          <label class="field">
+            <span>Key achievements</span>
+            <textarea name="achievements" rows="3" placeholder="Cut page load by 45%. Shipped a checkout redesign that lifted conversion 12%."></textarea>
+          </label>
+
+          <label class="field">
+            <span>Why this role or company</span>
+            <textarea name="motivation" rows="2" placeholder="Drawn to Acme's focus on accessible financial tools."></textarea>
+          </label>
+
+          <label class="field">
+            <span>Job description (optional)</span>
+            <textarea name="jobDescription" rows="4" placeholder="Paste the job description for stronger tailoring."></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              <span class="btn-label">Generate cover letter</span>
+              <span class="btn-spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <p id="form-error" class="error-text" role="alert" hidden></p>
+        </form>
+
+        <aside class="card result-card" aria-live="polite">
+          <div class="result-head">
+            <div class="card-title-row result-title-wrap">
+              <h2>Your cover letter</h2>
+              <span class="card-badge card-badge-muted">Step 2</span>
+            </div>
+            <div class="result-actions">
+              <button type="button" class="btn btn-ghost" id="copy-btn" disabled>Copy</button>
+              <button type="button" class="btn btn-secondary" id="download-btn" disabled>Download PDF</button>
+            </div>
+          </div>
+
+          <div id="result-empty" class="result-empty">
+            <p>Fill in the form and click <strong>Generate</strong> to see your draft here.</p>
+          </div>
+
+          <div id="result-loading" class="result-loading" hidden>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line short"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line"></div>
+            <div class="skeleton skeleton-line short"></div>
+          </div>
+
+          <article id="result-output" class="result-output" hidden></article>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
